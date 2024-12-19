@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/socials.css">
     <link rel="icon" href="images/icons/fav.png">
-    <title>DaTrueMeme - Home</title>
+    <title>DaTrueMeme - Socials</title>
 </head>
 <body>
     
@@ -15,10 +15,12 @@
 
             <img class="page" src="images/icons/nav/home.svg" alt="Home" onclick="goToPage('index.html')">
             <img class="page" src="images/icons/nav/person.svg" alt="Socials" onclick="goToPage('socials.html')">
+            <img class="page" src="images/icons/nav/music.svg" alt="Music" onclick="goToPage('music.html')">
     
         </div>
 
         <h1 class="title">Socials</h1>
+        <p>Here is a list of all of my socials, click on them to open them in a new tab!</p>
 
         <div class="grid-container">
 
@@ -34,8 +36,8 @@
                 <img src="images/logos/steam.svg" alt="Steam">
             </div>
 
-            <div class="card" onclick="goToPage('index.html')">
-                <img src="images/icons/nav/unknown.svg" alt="Unknown">
+            <div class="card" onclick="openInNewTab('https://soundcloud.com/alexdmsongs')">
+                <img src="images/logos/soundcloud.svg" alt="Steam">
             </div>
 
             <div class="card" onclick="goToPage('index.html')">
@@ -47,6 +49,13 @@
             </div>
 
         </div>
+    </div>
+
+    <div class="footer">
+
+        <p>AlexDM.net | 2024</p>
+        <a href="">Contact Me</a>
+
     </div>
 
     <script src="script.js"></script>
