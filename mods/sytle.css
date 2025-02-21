@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+body {
+    background-image: url(../assets/images/background.svg);
+    background-size: 20%;
+    min-height: 100vh;
+    align-content: center;
+    color: white;
+    
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-size: 90%;
+}
+
+
+.download {
+    margin: 0 auto;
+    padding: 2em;
+    width: 400px;
+    height: 400px;
+    background: #1c1f2b;
+    align-content: center;
+    text-align: center;
+    border-radius: 25px;
+    position: relative;
+}
+
+.download::after, .download::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, green, lime);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.75);
+
+    animation: 3s spin linear infinite;
+}
+
+.download::before {
+    filter: blur(1.5rem);
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+.title {
+    font-size: 50px;
+    font-family: "Merriweather Sans", serif;
+
+    transition: 
+        transform 0.3s ease, 
+        text-shadow 0.3s ease, 
+        text-underline-offset 0.3s ease, 
+        text-decoration 0.3s ease;
+}
+
+.title:hover {
+    transform: scaleX(1.1) scaleY(.9);
+    text-shadow: 6px 6px 0px #000000;
+    text-decoration: underline solid #ffffff;
+    text-underline-offset: 8px;
+}
+
+.download-button {
+    font-size: 40px;
+    background-color: #1c1f2b;
+    text-decoration: none;
+    color: lime;
+    padding: 15px;
+    border-radius: 100px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: rgb(87, 95, 107);
+    transform: scaleX(1.1) scaleY(.9);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .25);
+}
